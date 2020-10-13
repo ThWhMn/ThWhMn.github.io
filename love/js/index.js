@@ -55,69 +55,7 @@ window.onload = function(){
 
 //初始化样式
 function init(){
-    for(var i=0;i<allSet.length;i++){
-        for(var j=0;j<allSet[i][0].length;j++){
-            var temp = createLabel(allSet[i][0][j]);
-            clock.appendChild(temp);
-            allSet[i][1].push(temp);
-        }
-    }
-}
-
-function createLabel(text){
-    var oDiv = document.createElement("div");
-    oDiv.innerText = text;
-    oDiv.classList.add("label");
-    return oDiv;
-}
-
-
-function getTime(){
-    var labels = document.getElementsByClassName("label");
-    for(var i=0;i<labels.length;i++){
-        labels[i].style.fontWeight = "normal"
-        labels[i].style.color = "#000";
-    }
-
-    var now = new Date();
-    var month = now.getMonth();
-    var day = now.getDate();
-    var week = now.getDay();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var seconds = now.getSeconds()
-    var nowValue = [month,day-1,week,hour,minute,seconds];
-    for(var i=0;i<nowValue.length;i++){
-        var index = nowValue[i];
-        allSet[i][1][index].style.color = "yellow"
-        allSet[i][1][index].style.fontWeight = "bolder"
-    }
-
-    if(isChange){
-        var midX = document.body.clientWidth / 2;
-        var midY = document.body.clientHeight / 2 -100;
-        for(var i=0;i<allSet.length;i++){
-            for(var j=0;j<allSet[i][1].length;j++){
-                var r = (i+1)*25 + i*35;
-                var deg = 360 / allSet[i][0].length *(j-nowValue[i]);
-                var x = midX + r * Math.sin(deg*Math.PI/180);
-                var y = midY - r * Math.cos(deg*Math.PI/180);
-                allSet[i][1][j].style.left = x + "px";
-                allSet[i][1][j].style.top = y + "px";
-                allSet[i][1][j].style.transform = "rotate("+(deg-90)+"deg)";
-            }
-        }
-    }
-
-
-}
-
-function changePosition(){
-    for(let i=0;i<allSet.length;i++){
-        for(let j=0;j<allSet[i][1].length;j++){
-            let x = allSet[i][1][j].offsetLeft;
-            let y = allSet[i][1][j].offsetTop;
-            setTimeout(() => {
+    for(var i=0;i<allSet.length;i++){ 2 for(var j="0;j<allSet[i][0].length;j++){" var temp="createLabel(allSet[i][0][j]);" clock.appendchild(temp); allset[i][1].push(temp); } function createlabel(text){ odiv="document.createElement("div");" odiv.innertext="text;" odiv.classlist.add("label"); return odiv; gettime(){ labels="document.getElementsByClassName("label");" i="0;i<labels.length;i++){" labels[i].style.fontweight="normal" labels[i].style.color="#000" ; now="new" date(); month="now.getMonth();" day="now.getDate();" week="now.getDay();" hour="now.getHours();" minute="now.getMinutes();" seconds="now.getSeconds()" nowvalue="[month,day-1,week,hour,minute,seconds];" index="nowValue[i];" allset[i][1][index].style.color="yellow" allset[i][1][index].style.fontweight="bolder" if(ischange){ midx="document.body.clientWidth" 2; midy="document.body.clientHeight" -100; r="(i+1)*25" + i*35; deg="360" allset[i][0].length *(j-nowvalue[i]); x="midX" * math.sin(deg*math.pi 180); y="midY" - math.cos(deg*math.pi allset[i][1][j].style.left="x" "px"; allset[i][1][j].style.top="y" allset[i][1][j].style.transform="rotate(" +(deg-90)+"deg)"; changeposition(){ for(let let settimeout(()> {
                 allSet[i][1][j].style.position = "absolute";
                 allSet[i][1][j].style.left = x + "px";
                 allSet[i][1][j].style.top = y + "px";
@@ -140,38 +78,4 @@ function showText(){
     mouse.innerText = "__"
     ptext.append(mouse);
     var timer = setInterval(function(){
-        if(flag<logo.length){
-            if(logo.charAt(flag)!=","){
-                mouse.style.left =  parseInt(mouse.style.left) + "px"
-            }
-
-            if(logo.charAt(flag) == " "){
-                mouse.style.left = 0 + "px"
-                mouse.style.top = 29 + parseInt(mouse.style.top)+"px"
-                ptext.appendChild(document.createElement("br"))
-            }else if(logo.charAt(flag) == ","){
-                if(!show){
-                    mouse.style.display = "inline-block";
-                }else{
-                    mouse.style.display = "none";
-                }
-                show =!show;
-            }else{
-                mouse.style.left = 20 +parseInt(mouse.style.left) + "px"
-                var span = document.createElement("span");
-                span.innerText = logo.charAt(flag);
-                ptext.append(span)
-            }
-
-            flag++;
-
-
-        }else{
-            clear();
-            mouse.style.display='none'
-        }
-    },150)
-    function clear(){
-        clearInterval(timer)
-    }
-}
+        if(flag</allSet.length;i++){>

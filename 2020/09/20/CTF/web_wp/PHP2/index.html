@@ -27,17 +27,17 @@
 <meta property="og:site_name" content="ThWh&#39;s Blog">
 <meta property="og:description" content="简单的 GET和 URL加解码">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="d:/Hexo/source/_posts/CTF/web_wp/PHP2/firstlook.png">
-<meta property="og:image" content="d:/Hexo/source/_posts/CTF/web_wp/PHP2/encoder.png">
+<meta property="og:image" content="http://example.com/2020/09/20/CTF/web_wp/PHP2/firstlook.png">
+<meta property="og:image" content="http://example.com/2020/09/20/CTF/web_wp/PHP2/encoder.png">
 <meta property="article:published_time" content="2020-09-20T08:50:40.000Z">
-<meta property="article:modified_time" content="2020-09-25T12:47:35.830Z">
+<meta property="article:modified_time" content="2020-10-13T13:33:36.820Z">
 <meta property="article:author" content="ThWh">
 <meta property="article:tag" content="Writeups">
-<meta property="article:tag" content="Web">
+<meta property="article:tag" content="WEB">
 <meta property="article:tag" content="GET">
 <meta property="article:tag" content="urlcode">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="d:/Hexo/source/_posts/CTF/web_wp/PHP2/firstlook.png">
+<meta name="twitter:image" content="http://example.com/2020/09/20/CTF/web_wp/PHP2/firstlook.png">
 
 <link rel="canonical" href="http://example.com/2020/09/20/CTF/web_wp/PHP2/">
 
@@ -175,7 +175,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/20/CTF/web_wp/PHP2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/kawaii.gif">
       <meta itemprop="name" content="ThWh">
       <meta itemprop="description" content="">
     </span>
@@ -202,7 +202,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-25 20:47:35" itemprop="dateModified" datetime="2020-09-25T20:47:35+08:00">2020-09-25</time>
+                <time title="Modified: 2020-10-13 21:33:36" itemprop="dateModified" datetime="2020-10-13T21:33:36+08:00">2020-10-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -229,7 +229,7 @@
 <a id="more"></a>
 
 <p>打开网页只有这</p>
-<img src="D:\Hexo\source\_posts\CTF\web_wp\PHP2\firstlook.png" style="zoom:50%;" />
+<img src="/2020/09/20/CTF/web_wp/PHP2/firstlook.png" width="50%/">
 
 <p>御剑扫描出 <code>index.php</code> 和 <code>indexs.php</code> 从网友那得知</p>
 <blockquote>
@@ -245,7 +245,7 @@
 </blockquote>
 <p>在<code>burp</code>的<code>decoder</code>中进行编码</p>
 <p><code>admin</code> -&gt; <code>%61%64%6d%69%6e</code> -&gt; <code>%25%36%31%25%36%34%25%36%64%25%36%39%25%36%65</code></p>
-<img src="D:\Hexo\source\_posts\CTF\web_wp\PHP2\encoder.png" style="zoom:50%;" />
+<img src="/2020/09/20/CTF/web_wp/PHP2/encoder.png" width="50%/">
 
 <p>由网址可见，浏览器确实进行了一次编码</p>
 
@@ -258,7 +258,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Writeups/" rel="tag"># Writeups</a>
-              <a href="/tags/Web/" rel="tag"># Web</a>
+              <a href="/tags/WEB/" rel="tag"># WEB</a>
               <a href="/tags/GET/" rel="tag"># GET</a>
               <a href="/tags/urlcode/" rel="tag"># urlcode</a>
           </div>
@@ -339,6 +339,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ThWh"
+      src="/images/kawaii.gif">
   <p class="site-author-name" itemprop="name">ThWh</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -347,20 +349,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
